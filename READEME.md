@@ -27,7 +27,7 @@
 	</div>
 ```
 
-![](./1.png)
+![](./imgs/1.png)
 
 
 
@@ -38,26 +38,26 @@
 
 `flex-direction:row`
 
-![](./1.png)
+![](./imgs/1.png)
 
 `flex-direction:row-reverse`
 
-![](./2.png)
+![](./imgs/2.png)
 
 `flex-direction:column`
 
-![](./3.png)
+![](./imgs/3.png)
 
 `flex-direction:column-reverse`
 
-![](./4.png)
+![](./imgs/4.png)
 
 
 `flex-wrap`决定在子元素放不下的时候是否换行,默认是不换行
 ` flex-wrap: nowrap | wrap | wrap-reverse;`
 展示下换行的情况`flex-wrap:wrap`
 
-![](./5.png)
+![](./imgs/5.png)
 
 
 `flex-flow`是`flex-direction`和`flex-wrap`的简写形式
@@ -69,21 +69,21 @@
 
 如常用的中间对齐`justify-content:center`
 
-![](./6.png)
+![](./imgs/6.png)
 
 空隙均匀分配`justify-content:space-around`
 
-![](./7.png)
+![](./imgs/7.png)
 
 `align-items`次轴对齐内容的方式
 `  align-items: flex-start | flex-end | center | baseline | stretch;`
 例如`align-item:center`
 
-![](./8.png)
+![](./imgs/8.png)
 
 底部对齐 `align-item:flex-end`
 
-![](./9.png)
+![](./imgs/9.png)
 
 `align-content`多行的时候次轴对齐内容的方式，这里就不举例了，参照`align-items`
 
