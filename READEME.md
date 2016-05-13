@@ -39,12 +39,15 @@
 `flex-direction:row`
 
 ![](./1.png)
+
 `flex-direction:row-reverse`
 
 ![](./2.png)
+
 `flex-direction:column`
 
 ![](./3.png)
+
 `flex-direction:column-reverse`
 
 ![](./4.png)
