@@ -54,17 +54,21 @@
 
 
 `flex-wrap`决定在子元素放不下的时候是否换行,默认是不换行
+
 ` flex-wrap: nowrap | wrap | wrap-reverse;`
+
 展示下换行的情况`flex-wrap:wrap`
 
 ![](./imgs/5.png)
 
 
 `flex-flow`是`flex-direction`和`flex-wrap`的简写形式
+
 ` flex-flow: <flex-direction> || <flex-wrap>;`
 
 
 `justify-content`主轴对齐内容的方式
+
 ` justify-content: flex-start | flex-end | center | space-between | space-around;`
 
 如常用的中间对齐`justify-content:center`
@@ -76,7 +80,9 @@
 ![](./imgs/7.png)
 
 `align-items`次轴对齐内容的方式
+
 `  align-items: flex-start | flex-end | center | baseline | stretch;`
+
 例如`align-item:center`
 
 ![](./imgs/8.png)
@@ -117,7 +123,9 @@ flex属性是flex-grow, flex-shrink 和 flex-basis的简写
 
 
 `align-self`允许子元素设置自己的次轴对齐方式
+
 ` align-self: auto | flex-start | flex-end | center | baseline | stretch;`
+
 这里我让总体向上对齐，子元素二单独向下对齐`align-self:flex-end`
 
 ![](./imgs/12.png)
