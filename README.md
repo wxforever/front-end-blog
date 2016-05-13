@@ -27,7 +27,7 @@
 	</div>
 ```
 
-![](./imgs/1.png)
+![](./imgs/imgs/1.png)
 
 
 
@@ -38,26 +38,26 @@
 
 `flex-direction:row`
 
-![](./imgs/1.png)
+![](./imgs/imgs/1.png)
 
 `flex-direction:row-reverse`
 
-![](./imgs/2.png)
+![](./imgs/imgs/2.png)
 
 `flex-direction:column`
 
-![](./imgs/3.png)
+![](./imgs/imgs/3.png)
 
 `flex-direction:column-reverse`
 
-![](./imgs/4.png)
+![](./imgs/imgs/4.png)
 
 
 `flex-wrap`决定在子元素放不下的时候是否换行,默认是不换行
 ` flex-wrap: nowrap | wrap | wrap-reverse;`
 展示下换行的情况`flex-wrap:wrap`
 
-![](./imgs/5.png)
+![](./imgs/imgs/5.png)
 
 
 `flex-flow`是`flex-direction`和`flex-wrap`的简写形式
@@ -69,21 +69,21 @@
 
 如常用的中间对齐`justify-content:center`
 
-![](./imgs/6.png)
+![](./imgs/imgs/6.png)
 
 空隙均匀分配`justify-content:space-around`
 
-![](./imgs/7.png)
+![](./imgs/imgs/7.png)
 
 `align-items`次轴对齐内容的方式
 `  align-items: flex-start | flex-end | center | baseline | stretch;`
 例如`align-item:center`
 
-![](./imgs/8.png)
+![](./imgs/imgs/8.png)
 
 底部对齐 `align-item:flex-end`
 
-![](./imgs/9.png)
+![](./imgs/imgs/9.png)
 
 `align-content`多行的时候次轴对齐内容的方式，这里就不举例了，参照`align-items`
 
@@ -94,13 +94,13 @@
 
 这里我把子元素2的顺序定义为-1，看是否会排到最前面,如下图
 
-![](./10.png)
+![](./imgs/10.png)
 
 `flex-grow`定义子元的放大比例，默认为0（不放大）
 这里我试试把子元素2的放大比例设置为1，看看会发生什么情况，如下图,子元素2
 	占据了剩下的所有空间，空隙没有了
 	
-![](./11.png)
+![](./imgs/11.png)
 
 
 `flex-shrink`定义子元素的缩小比例，默认为1（空间不足时都要缩小，这是弹性布局很重要的一个特点，设置为0，则这个元素不会缩小）
@@ -120,7 +120,7 @@ flex属性是flex-grow, flex-shrink 和 flex-basis的简写
 ` align-self: auto | flex-start | flex-end | center | baseline | stretch;`
 这里我让总体向上对齐，子元素二单独向下对齐`align-self:flex-end`
 
-![](./12.png)
+![](./imgs/12.png)
 
 flex布局的属性基本实践了一遍，具体可以去看<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool">阮一峰大大的博客</a>
 
