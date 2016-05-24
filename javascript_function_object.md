@@ -57,4 +57,24 @@ with this doubt,I hava read some material,then this blog get me out of it.
 
 
 it says that function is a object constructor,all object constructors in javascript are objects,but not all objects are object constructors.
-	so we can use javascript funcition act like object.
+	so we can use javascript funcition act like object.for example
+
+```javascript
+	
+	function a(){
+		console.log(a.b)
+	}
+
+	a.b=1
+
+	a()//console will log 1
+
+//and also we can put function into a array,because it act like object
+
+var a=[function(arg){console.log(arg)}]
+
+a[0](1)//console will log 1
+
+
+
+```
