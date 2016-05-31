@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, 
+            initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, 
+            user-scalable=no">
+	<title>css layout</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		font-size: 20px;
+	}
+	a{
+		text-decoration: none;
+	}
+	ul{
+		display: table;
+		width: 90%;/*给两边分别留5%的空隙*/
+		margin: 1rem auto;
+
+		border-collapse: collapse; 
+	
+		text-align: center;
+	}
+	ul>li{
+	 list-style-type: none;
+	 display: table-cell;
+	
+	
+	background-color: green;
+	border: 1px solid red;
+
+	white-space: nowrap;
+	}
+</style>
+
+<body>
+	<ul>
+		<li><a href="">元素1</a></li>
+		<li><a href="">元素2</a></li>
+		<li><a href="">元素3</a></li>
+		<li><a href="">元素4</a></li>
+		<li><a href="">元素5</a></li>
+	</ul>
+</body>
+</html>
