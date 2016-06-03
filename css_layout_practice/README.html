@@ -742,6 +742,9 @@ categories: 前端基础</p>
 <p>原生导航的实现</p>
 </blockquote>
 
+<p>下面用原生css实现了一个横向的导航栏,使用了表格布局属性,display:table等
+    使用表格布局的好处是可以做到单元格自适应,单元格等宽</p>
+
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span>&gt;
         &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;元素1&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
         &lt;<span class="pl-ent">li</span>&gt;&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;元素2&lt;/<span class="pl-ent">a</span>&gt;&lt;/<span class="pl-ent">li</span>&gt;
@@ -761,6 +764,7 @@ categories: 前端基础</p>
         <span class="pl-c1"><span class="pl-c1">font-size</span></span>: <span class="pl-c1">20<span class="pl-k">px</span></span>;
     }
     <span class="pl-ent">a</span>{
+
         <span class="pl-c1"><span class="pl-c1">text-decoration</span></span>: <span class="pl-c1">none</span>;
     }
     <span class="pl-ent">ul</span>{
@@ -777,7 +781,7 @@ categories: 前端基础</p>
      <span class="pl-c1"><span class="pl-c1">list-style-type</span></span>: <span class="pl-c1">none</span>;
      <span class="pl-c1"><span class="pl-c1">display</span></span>: table-cell;
 
-    <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">2.5<span class="pl-k">rem</span></span>;
+
     <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">green</span>;
     <span class="pl-c1"><span class="pl-c1">border</span></span>: <span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-c1">solid</span> <span class="pl-c1">red</span>;
 
@@ -786,4 +790,30 @@ categories: 前端基础</p>
 </pre></div>
 
 <p><a href="uploads/csslayout/1.png" target="_blank"><img src="uploads/csslayout/1.png" alt="" style="max-width:100%;"></a></p>
+
+<blockquote>
+<p>各种自适应布局</p>
+</blockquote>
+
+<p>利用<code>overflow:hidden</code>来触发bfc实现左边定宽，右边自适应的布局</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>left<span class="pl-pds">"</span></span>&gt;左边元素&lt;/<span class="pl-ent">div</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>right<span class="pl-pds">"</span></span>&gt;右边元素&lt;/<span class="pl-ent">div</span>&gt;
+</pre></div>
+
+<div class="highlight highlight-source-css"><pre>
+    <span class="pl-e">.left</span>{
+        <span class="pl-c1"><span class="pl-c1">float</span></span>: <span class="pl-c1">left</span>;
+        <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">5<span class="pl-k">rem</span></span>;
+        <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">green</span>;
+
+
+    }
+    <span class="pl-e">.right</span>{
+        <span class="pl-c1"><span class="pl-c1">background</span></span>:<span class="pl-c1">orange</span>;
+        <span class="pl-c1"><span class="pl-c1">overflow</span></span>: <span class="pl-c1">hidden</span>;
+    }
+</pre></div>
+
+<p><a href="uploads/csslayout/2.png" target="_blank"><img src="uploads/csslayout/2.png" alt="" style="max-width:100%;"></a></p>
 </article></body></html>

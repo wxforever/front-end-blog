@@ -40,6 +40,7 @@ tags: css
 		font-size: 20px;
 	}
 	a{
+
 		text-decoration: none;
 	}
 	ul{
@@ -68,4 +69,99 @@ tags: css
 ![](uploads/csslayout/1.png)
 
 
-竖向导航的实现
+>各种自适应布局
+
+
+#####左边定宽，右边自适应的布局
+
+```html
+<div class="left">左边元素</div>
+<div class="right">右边元素</div>
+
+```
+
+```css
+/*第一种方式 利用`overflow:hidden`来触发bfc实现左边定宽，右边自适应的布局 */
+	.left{
+		float: left;
+		width: 5rem;
+		background-color: green;
+
+
+	}
+	.right{
+        background-color:orange;
+        overflow: hidden;
+	}
+
+  /*第二种方式,利用margin-left*/
+
+  .left{
+         float: left;
+		width: 5rem;
+		background-color: green;
+
+      }
+   .right{
+          background-color:orange;
+          margin-left:5rem;
+       }
+   /*还有其他方式，比上面的方式更负责，就不介绍了*/
+```
+
+![](uploads/csslayout/2.png)
+
+
+#####右边定宽，左边自适应
+
+利用float加负margin布局后遗症比较多,例如左边内容会被右边遮挡(当然可以用padding解决，不过麻烦)，所以还是利用表格来实现
+
+```html
+
+<div class="parent">
+<div class="left">左边元素</div>
+<div class="right">右边元素</div>
+</div>
+
+```
+
+```css
+
+.parent{
+	display: table;
+	table-layout: fixed;/*这个很重要,默认是automatic*/
+	width: 100%;
+
+}
+.right{
+	display: table-cell;
+	width:5rem;
+	background-color:purple;
+	
+}
+
+.left{
+	display: table-cell;
+	
+	background-color: green;
+	
+	
+}
+
+
+```
+
+![](uploads/csslayout/3.png)
+
+
+
+
+总的来说table对各种自适应布局都能很好的实现，除上面之外，还有什么两列定宽，一列自适应等等等等，
+	另外table还可以用来作居中的用途，垂直居中，垂直水平居中等，都很好用,当然居中的实现除了table外
+	利用margin，text-align等都比较常用。
+
+>参考文章
+
+本文极大参考下面的文章
+
+[如何布局关于HTML与CSS布局技巧?](https://www.zhihu.com/question/38280161])

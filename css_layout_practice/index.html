@@ -7,7 +7,9 @@
             user-scalable=no">
 	<title>css layout</title>
 </head>
+<!--
 <style type="text/css">
+
 	*{
 		margin: 0;
 		padding: 0;
@@ -18,9 +20,10 @@
 	a{
 		text-decoration: none;
 	}
+
 	ul{
 		display: table;
-		width: 90%;/*给两边分别留5%的空隙*/
+		width: 3rem;/*给两边分别留5%的空隙*/
 		margin: 1rem auto;
 
 		border-collapse: collapse; 
@@ -37,6 +40,8 @@
 
 	white-space: nowrap;
 	}
+
+	
 </style>
 
 <body>
@@ -47,5 +52,46 @@
 		<li><a href="">元素4</a></li>
 		<li><a href="">元素5</a></li>
 	</ul>
+</body>
+-->
+<style type="text/css">
+     	*{
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		font-size: 20px;
+	}
+	a{
+		text-decoration: none;
+	}
+
+
+.parent{
+	display: table;
+	table-layout: fixed;/*这个很重要,默认是automatic*/
+	width: 100%;
+
+}
+.right{
+	display: table-cell;
+	width:5rem;
+	background-color:purple;
+	
+}
+
+.left{
+	display: table-cell;
+	
+	background-color: green;
+	
+	
+}
+</style>
+<body>
+<div class="parent">
+<div class="left">左边元素</div>
+<div class="right">右边元素</div>
+</div>
 </body>
 </html>
