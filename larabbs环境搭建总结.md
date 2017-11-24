@@ -23,3 +23,5 @@
 11、修改public vendor storage目录权限为777
 
 12、注释掉导致报错的app.blade.pp中sudo相关行
+
+13、修改nginx.conf为laravel相关配置
