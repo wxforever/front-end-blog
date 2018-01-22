@@ -1,0 +1,15 @@
+### laravel5.4升级到5.5
+
+
+修改composer.json:
+
+"laravel/framework": "5.5.*",
+
+"phpunit/phpunit": "~6.0"
+scripts增加：
+
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+执行composer update -vvv
