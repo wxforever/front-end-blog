@@ -5,3 +5,13 @@
 3、laradock 安装node，swoole后进入workspace无法看到，重启虚拟机解决
 
 4、安装的swoole插件有2个地方，一个是fpm使用的，一个是workspace的，不一样
+
+5、mysql启动不了。用以下方法解决
+edit .env
+DATA_SAVE_PATH=~/.laradock/data
+to
+DATA_SAVE_PATH=./data
+Absolute directory d:\docker_www\laradock\data, D Drivers is shared driver
+
+try again
+docker-compose up -d mysql
