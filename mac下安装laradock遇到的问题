@@ -3,3 +3,5 @@
 2、服务配置完成了，确无法访问laravel。可以通过虚拟机ip访问, 也可以更改hosts文件添加域名
 
 3、laradock 安装node，swoole后进入workspace无法看到，重启虚拟机解决
+
+4、安装的swoole插件有2个地方，一个是fpm使用的，一个是workspace的，不一样
