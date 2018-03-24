@@ -101,3 +101,8 @@ flat(arr)
         }
     </style>
 
+4、网络中断后如何中网络恢复后刷新页面
+可以通过监听window的online和offline事件，另外还有navigator.onLine的值会发生变化。然后调用页面刷新或其他相关操作
+
+            this.show = function(){wind
+            this.show = function(){
