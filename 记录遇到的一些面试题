@@ -119,4 +119,11 @@ var newStr=str.toLowerCase().split(/\s+/).reduce(function(prev,item){
 },'');
 console.log(newStr);
 
+6、style标签写在body后与body前有什么区别?
+不过网页浏览器一直有容错设计。如果style元素出现在body元素，最终效果和style元素出现在head里是一样的。但是可能引起FOUC、重绘或重新布局。注意，根据当前标准，<link rel=stylesheet ...> 是可以出现在body元素中的。并且也可能引起上述问题。然而link是引用资源，意味着可以用于故意设计的异步加载。而style元素是直接内嵌的，并没有合理的use case去使用它。所以html标准中允许body中出现link，而不允许style。
+
+作者：贺师俊
+链接：https://www.zhihu.com/question/39840003/answer/181308294
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
