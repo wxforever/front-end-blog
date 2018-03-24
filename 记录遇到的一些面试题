@@ -27,3 +27,14 @@ ar show = function(){
         obj.time();
 
 
+2、判断一个空对象
+JSON.stringify(obj)==='{}'
+3、数组展平
+//数组展平
+var arr=[12,3,4,[5,6],[7,[8,9]]];
+function flat(arr){
+   return arr.reduce(function(acc,val){
+       return acc.concat(Array.isArray(val)?flat(val):val)
+    },[])
+}
+flat(arr)
