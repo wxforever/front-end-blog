@@ -1,0 +1,29 @@
+1、var obj={name:'yangyang'};
+var name='ted';
+obj.sayHello=function(){
+    console.log(this.name);
+}
+window.setTimeout(obj.sayHello,1000);
+题目大致是这样，问输出什么，应该输出'ted'。如果是window.setTimeout(function(){obj.sayHello()},1000)才输出'yangyang';
+贴下面的内容帮助理解
+ar show = function(){
+            alert(this+" is all");
+        }
+        var Obj = function(){
+            this.show = function(){
+                alert(this+" is obj");
+            }
+            this.time = function(){
+                var self = this;
+                //setTimeout(function(){this.show();}, 2000);//window is all
+                setTimeout(function(){self.show();}, 2000);//Obj is obj
+                //setTimeout("this.show()", 2000);//window is all
+                //setTimeout("self.show()", 2000);//window is all
+                //setTimeout(this.show, 2000);//window is obj
+                //setTimeout(self.show, 2000);//window is obj
+            }
+        }
+        var obj = new Obj();
+        obj.time();
+
+
