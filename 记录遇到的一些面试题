@@ -103,6 +103,11 @@ flat(arr)
 
 4、网络中断后如何中网络恢复后刷新页面
 可以通过监听window的online和offline事件，另外还有navigator.onLine的值会发生变化。然后调用页面刷新或其他相关操作
+5、让一段文本中的所有英文单词的首字母大写
+方法一：
+var str='hello world';
+var newStr=str.toLowerCase().split(/\s+/).map(function(item,index){
+    return item.slice(0,1).toUpperCase()+item.slice(1)
+}).join(' ');
+console.log(newStr);
 
-            this.show = function(){wind
-            this.show = function(){
