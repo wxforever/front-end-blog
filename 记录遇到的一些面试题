@@ -126,4 +126,38 @@ console.log(newStr);
 链接：https://www.zhihu.com/question/39840003/answer/181308294
 来源：知乎
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+7、同一dom多个class样式渲染规则
+参考：https://www.cnblogs.com/ranyonsue/p/7117633.html
+一个DOM元素同时拥有多个类名时的样式产生冲突时 属性取决于css样式表中后读取到的属性
+如果一个DOM元素包含多个类名，其中的两个类名的属性产生冲突，并不是根据html中类名的顺序来决定DOM元素的属性，
+
+而是根据css样式中的顺序来决定DOM元素的属性，它取决于css样式表中后读取到的属性。
+
+ 
+
+例如：
+
+html
+
+<div class="function hidden show"></div>
+
+ 
+
+css:
+
+.show{
+
+  display:block;
+
+}
+
+.hidden{
+
+  display:none;
+
+}
+
+div元素的display属性最终为none;
+
+ 
 
