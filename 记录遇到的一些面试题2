@@ -10,3 +10,6 @@ alert(this);
 2)弹出window object,this是写在doSomething这个函数里面的，而这种方式的事件绑定写法并没有将element对象传递给this，而在默认情况下this 指向window； 
 3)弹出window object，没有绑定对象的情况下this默认指向window。
 
+2、repain和reflow
+参考文章：https://segmentfault.com/a/1190000002629708
+
