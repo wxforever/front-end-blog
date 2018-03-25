@@ -13,3 +13,7 @@ alert(this);
 2、repain和reflow
 参考文章：https://segmentfault.com/a/1190000002629708
 
+3、jsonp
+参考文章：https://baike.baidu.com/item/jsonp/493658?fr=aladdin
+        https://www.cnblogs.com/chiangchou/p/jsonp.html
+
