@@ -1,0 +1,12 @@
+1、请说明下面各种情况的执行结果，并注明产生对应结果的理由
+function doSomething() { 
+alert(this); 
+} 
+① element.onclick = doSomething，点击element元素后。 
+② element.onclick = function() {doSomething()}， 点击element元素后。 
+③ 直接执行doSomething()。**
+
+1)弹出element object,通过函数赋值方式，this直接指向element对象； 
+2)弹出window object,this是写在doSomething这个函数里面的，而这种方式的事件绑定写法并没有将element对象传递给this，而在默认情况下this 指向window； 
+3)弹出window object，没有绑定对象的情况下this默认指向window。
+
