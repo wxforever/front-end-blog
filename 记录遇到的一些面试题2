@@ -16,4 +16,27 @@ alert(this);
 3、jsonp
 参考文章：https://baike.baidu.com/item/jsonp/493658?fr=aladdin
         https://www.cnblogs.com/chiangchou/p/jsonp.html
-
+4、Array.sort多条件排序
+eg.
+var arr= [ 
+    { 'sortNo': 2, 'sortNo2': 3},
+    { 'sortNo': 1, 'sortNo2': 3},
+    { 'sortNo': 5, 'sortNo2': 3},
+    { 'sortNo': 6, 'sortNo2': 3},
+    { 'sortNo': 7, 'sortNo2': 3},
+    { 'sortNo': 3, 'sortNo2': 4},
+    { 'sortNo': 3, 'sortNo2': 2},
+    { 'sortNo': 3, 'sortNo2': 1},
+    { 'sortNo': 3, 'sortNo2': 3},
+    { 'sortNo': 8, 'sortNo2': 3},
+    { 'sortNo': 4, 'sortNo2': 1},
+    { 'sortNo': 4, 'sortNo2': 2}
+];
+arr.sort(function(a, b){
+    if (a.sortNo === b.sortNo) {
+            return b.sortNo2 - a.sortNo2;
+    } else {
+            return a.sortNo - b.sortNo;
+    }
+});
+console.log(arr); 
