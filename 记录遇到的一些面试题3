@@ -27,3 +27,24 @@ b = JSON.parse( JSON.stringify(a) )
 通过Promise.prototype.then和Promise.prototype.catch方法将观察者方法注册到被观察者Promise对象中，同时返回一个新的Promise对象，以便可以链式调用。
 被观察者管理内部pending、fulfilled和rejected的状态转变，同时通过构造函数中传递的resolve和reject方法以主动触发状态转变和通知观察者。
 
+3、左边定宽，右边自适应布局
+  <div class="container">
+            <div class="left">left</div>
+            <div class="right">right</div>
+    </div>
+方法1:
+```
+<style>
+     .left{
+         
+         float: left;
+         width: 100px;
+         background: red;   
+     }
+     .right{
+         margin-left: 100px;
+         background: yellow;
+              
+     }
+    </style>
+```
