@@ -48,3 +48,23 @@ b = JSON.parse( JSON.stringify(a) )
      }
     </style>
 ```
+方法二：
+···
+<style>
+     .container{
+         display: flex;
+     }
+     .left{
+         
+        
+         width: 100px;
+         background: red;   
+     }
+     .right{
+         flex:1;
+         background: yellow;
+         
+              
+     }
+    </style>
+···
