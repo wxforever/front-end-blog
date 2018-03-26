@@ -64,3 +64,7 @@ will-chang 属性（这个比较偏僻），一般配合opacity与translate使�
 
 弊端：硬件加速会导致 CPU 性能占用量过大，电池电量消耗加大 ；因此尽量避免泛滥使用硬件加
 
+6、变量提升
+参考文章：https://segmentfault.com/q/1010000002636254
+        https://blog.csdn.net/wszll_alex/article/details/53914417
+
