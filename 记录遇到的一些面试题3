@@ -68,3 +68,23 @@ b = JSON.parse( JSON.stringify(a) )
      }
     </style>
 ···
+方法3:
+···
+<style>
+     .container{
+        background: blue;
+     }
+     .left{
+         
+        position: absolute;
+         width: 100px;
+         background: red;   
+     }
+     .right{
+         padding-left: 100px;
+         background: yellow;
+         
+              
+     }
+ </style>
+···
