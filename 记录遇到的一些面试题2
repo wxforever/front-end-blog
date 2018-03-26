@@ -67,4 +67,6 @@ will-chang 属性（这个比较偏僻），一般配合opacity与translate使�
 6、变量提升
 参考文章：https://segmentfault.com/q/1010000002636254
         https://blog.csdn.net/wszll_alex/article/details/53914417
-
+7、作用域链
+参考文章：https://www.jianshu.com/p/181da2b57eb2
+        https://blog.csdn.net/charlene0824/article/details/52252824
