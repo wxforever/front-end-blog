@@ -1,0 +1,14 @@
+1、实现extend函数
+ function extend(target,source){
+    for(var p in source){
+        if(source.hasOwnProperty(p)){
+            target[p]=source[p]
+        }
+    }
+    return target
+}
+//test
+var a={test:1};
+var b={test2:2};
+extend(a,b);
+console.log(a);//output `{ test: 1, test2: 2 }`
