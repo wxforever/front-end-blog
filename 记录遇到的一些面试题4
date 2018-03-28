@@ -1,2 +1,8 @@
 1、promise的用法
 参考文章：https://www.cnblogs.com/whybxy/p/7645578.html
+2、封装一个函数，参数是定时器的时间，.then执行回调函数。
+function sleep (time) {
+
+  return new Promise((resolve) => setTimeout(resolve, time));
+
+}
