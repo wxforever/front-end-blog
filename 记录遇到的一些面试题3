@@ -96,4 +96,5 @@ b = JSON.parse( JSON.stringify(a) )
 6、数组传引用
 参考文章：https://www.cnblogs.com/yuyifan/p/6204365.html
 7 、var、let、const区别
-参考文章：https://www.zhihu.com/question/52662013
+参考文章：https://zhuanlan.zhihu.com/p/28140450
+https://www.zhihu.com/question/52662013
