@@ -93,3 +93,5 @@ b = JSON.parse( JSON.stringify(a) )
 参考文章：https://zhuanlan.zhihu.com/p/28626505?utm_source=wechat_session&utm_medium=social
 5、bfc
 参考文章:https://juejin.im/entry/59c3713a518825396f4f6969
+6、数组传引用
+参考文章：https://www.cnblogs.com/yuyifan/p/6204365.html
