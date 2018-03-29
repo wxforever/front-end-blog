@@ -9,3 +9,4 @@ function sleep (time) {
 3、你能实现一下双向绑定吗？
 参考文章；https://ghoskno.github.io/2017/02/21/vue-bind/
          http://www.cnblogs.com/kidney/p/6052935.html
+         https://segmentfault.com/a/1190000006599500
