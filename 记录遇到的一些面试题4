@@ -17,3 +17,13 @@ if(document.mylist.length != “undefined” ) {} 这个用法有误.
 正确的是 if( typeof(document.mylist.length) != “undefined” ) {}
 
 或 if( !isNaN(document.mylist.length) ) {}
+
+5、原型和原型链
+参考文章：https://www.jianshu.com/p/dee9f8b14771
+关键点：（1）JavaScript 中，万物皆对象！但对象也是有区别的。分为普通对象和函数对象
+       （2）每个函数对象都有一个prototype 属性，这个属性指向函数的原型对象
+       （3）在默认情况下，所有的原型对象都会自动获得一个 constructor（构造函数）属性，这个属性（是一个指针）指向 prototype 属性所在的函数
+        (4)Object.__proto__ === Function.prototype // true   Function.__proto__ === Function.prototype // true
+        Function.prototype.__proto__ === Object.prototype //true     Object.prototype.__proto__ === null 
+        (5)实例（tidy）和 原型对象（dog.prototype）存在一个连接。不过，要明确的真正重要的一点就是，这个连接存在于实例（tidy）与构造函数的原型对象（dog.prototype）之间，而不是存在于实例（tidy）与构造函数（dog）之间。
+       
