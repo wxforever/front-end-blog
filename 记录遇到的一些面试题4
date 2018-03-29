@@ -10,3 +10,10 @@ function sleep (time) {
 参考文章；https://ghoskno.github.io/2017/02/21/vue-bind/
          http://www.cnblogs.com/kidney/p/6052935.html
          https://segmentfault.com/a/1190000006599500
+4、typeof用法介绍
+参考文章：https://blog.csdn.net/z18842589113/article/details/53315910
+if(document.mylist.length != “undefined” ) {} 这个用法有误.
+
+正确的是 if( typeof(document.mylist.length) != “undefined” ) {}
+
+或 if( !isNaN(document.mylist.length) ) {}
