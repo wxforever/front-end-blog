@@ -34,3 +34,11 @@ function total(day,remain){
   if(day===1){return remain}
    return total(day-1,2*(remain+1))
 }
+7、关于Promise更深入对理解
+（1）then函数可以在resolve执行之后加，因为Promise对象会保存reslove值
+eg:var a=new Promise(function(resolve,reject){
+      resolve(1)
+})
+undefined
+再在console输入如下，会输出1
+a.then(function(data){console.log(data)})
