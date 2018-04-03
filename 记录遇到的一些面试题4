@@ -42,3 +42,6 @@ eg:var a=new Promise(function(resolve,reject){
 undefined
 再在console输入如下，会输出1
 a.then(function(data){console.log(data)})
+（2）then的连用
+每次使用then都会返回一个新的Promise,函数的返回值为下一个then里面函数接收的参数
+eg.接上面 a.then(function(){return 2}).then(function(data){console.log(data)})//输出2
