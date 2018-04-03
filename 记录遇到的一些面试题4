@@ -45,3 +45,4 @@ a.then(function(data){console.log(data)})
 （2）then的连用
 每次使用then都会返回一个新的Promise,函数的返回值为下一个then里面函数接收的参数
 eg.接上面 a.then(function(){return 2}).then(function(data){console.log(data)})//输出2
+(3)直接调用Promise.resolve会生成一个新的resolved的Promise对象，可以使用then方法
