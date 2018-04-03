@@ -46,3 +46,5 @@ a.then(function(data){console.log(data)})
 每次使用then都会返回一个新的Promise,函数的返回值为下一个then里面函数接收的参数
 eg.接上面 a.then(function(){return 2}).then(function(data){console.log(data)})//输出2
 (3)直接调用Promise.resolve会生成一个新的resolved的Promise对象，可以使用then方法
+(4)new Promise(function(resolve,reject))中，这里的function在Promise构造的时候会立即执行，
+参数resolve,reject为Promise构造函数的内部函数，同时Promise保存内容状态和内部数据，每个then产生的Promise内部状态和数据独立
