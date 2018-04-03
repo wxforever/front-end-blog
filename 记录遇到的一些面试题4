@@ -28,3 +28,9 @@ if(document.mylist.length != “undefined” ) {} 这个用法有误.
         (5)实例（tidy）和 原型对象（dog.prototype）存在一个连接。不过，要明确的真正重要的一点就是，这个连接存在于实例（tidy）与构造函数的原型对象（dog.prototype）之间，而不是存在于实例（tidy）与构造函数（dog）之间。
        
 参考文章：http://www.cnblogs.com/snandy/archive/2012/09/01/2664134.html
+6、猴子吃桃问题
+假设总共有x个桃，猴子每天吃一半，再扔掉一个，到第n天，还剩m个( 假定第n天没吃)，求总个数x？
+function total(day,remain){
+  if(day===1){return remain}
+   return total(day-1,2*(remain+1))
+}
