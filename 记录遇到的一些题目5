@@ -1,8 +1,12 @@
 1、promise相关
-new Promise(function(resolve,reject){reject(2)})
+(1)new Promise(function(resolve,reject){reject(2)})
   .then(function(data){console.log('resolve'+data)},function(data1){console.log('reject'+data1)})
   .catch(function(data3){console.log('catch'+data3)})//输入reject2
-  new Promise(function(resolve,reject){reject(2)})
+(2)  new Promise(function(resolve,reject){reject(2)})
   .then(function(data){console.log('resolve'+data)},function(data2){console.log('reject'+data2);return Promise.reject(data2);})
   .catch(function(data3){console.log('catch'+data3)})//输出 reject2 catch2
-
+(3)
+  new Promise(function(resolve,reject){reject(2)})
+  .then(function(data){console.log('resolve'+data)})
+  .catch(function(data3){console.log('catch'+data3)})//输出catch2
+ 
