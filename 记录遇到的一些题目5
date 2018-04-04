@@ -9,4 +9,12 @@
   new Promise(function(resolve,reject){reject(2)})
   .then(function(data){console.log('resolve'+data)})
   .catch(function(data3){console.log('catch'+data3)})//输出catch2
+  
+note:promise返回值中含有promise的情况
+一般这种情况出现在then函数中含有promise，因为then会生成一个新的promise，所以是这种情况。
+这种情况下，then函数构造promise生成的内部resolve方法会通过内部的promise的then方法调用注册，
+在内部promise返回结果后，then方法生成的promise的内部resolve方法会被调用。从而保证执行顺序
+猜想内部promise的reject方法也会调用then生成promise的reject方法，也是通过把外部的reject方法注册到内部promise的then回调里面
+
+
  
