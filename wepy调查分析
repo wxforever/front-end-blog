@@ -1,6 +1,7 @@
 
 ### wepy调查分析
- 参考：https://github.com/yingye/Blog/issues/4
+ 参考：https://github.com/yingye/Blog/issues/4（运行原理）
+ https://github.com/yingye/Blog/issues/3（编译过程）
       
 1、如何更新模板
 wepy 使用脏数据检查对原生小程序 setData 进行封装，在函数运行周期结束时执行脏数据检查。如果在异步函数中更新数据时，则需要手动执行 $apply() 
@@ -10,10 +11,12 @@ wepy 使用脏数据检查对原生小程序 setData 进行封装，在函数运
 跟vue类似，组件类需继承wepy.component就可以
 
 4、如何支持模板过滤器，类似vue模板里面的filter
-没有filter，可以使用微信脚本，可以使用compute
+没有filter，可以使用微信脚本，也可以使用compute
 
 5、简单的框架封装思路
 本身wepy就是对原生小程序对简单封装，实现思路跟我们现在小程序类似，继承wepy.page可以实现我们对pageView,然后让每个页面继承pageview就行
 
 6、如何调用微信提供的API
 都挂载在wepy这个类上面，直接wepy.getUserInfo()就行，其他api一样
+
+总结：wepy核心代码并不多，属于比较简单初级的框架，对原生微信小程序进行了封装。框架简单的好处是易于控制，坏处是坑比较多
